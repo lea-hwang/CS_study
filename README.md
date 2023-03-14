@@ -1,6 +1,17 @@
 # CS_study
 ## 스터디 인원
-- 3명(박소정, 배근혜, 황희원)
+<table>
+ <tr>
+    <td align="center"><a href="https://github.com/sojung13"><img src="https://avatars.githubusercontent.com/sojung13" width="150px;" alt=""></td>
+    <td align="center"><a href="https://github.com/hyehye66"><img src="https://avatars.githubusercontent.com/hyehye66" width="150px;" alt=""></td>
+    <td align="center"><a href="https://github.com/lea-hwang"><img src="https://avatars.githubusercontent.com/lea-hwang" width="150px;" alt=""></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/sojung13"><b>박소정</b></td>
+    <td align="center"><a href="https://github.com/hyehye66"><b>배근혜</b></td>
+    <td align="center"><a href="https://github.com/lea-hwang"><b>황희원</b></td>
+  </tr>
+</table>
 
 
 
