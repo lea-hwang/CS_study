@@ -87,8 +87,6 @@ let myArray = [];
 
 ![img](assets/img.jpg)
 
-![img](assets/img-1680313176762-25.jpg)
-
 - `push`, `pop` 메소드 사용
 
 ```javascript
@@ -108,9 +106,6 @@ myArray.pop();
 ❓여기서 **변경**은 어떤 상황을 의미하는 것일까❓
 
 ```javascript
-let sum = 0;
-sum = 1 + 2 + 3 + 4 + 5;
-
 let numbers = [];
 numbers.push(1);
 numbers.push(2);
