@@ -35,7 +35,7 @@ HTML 파싱과 **병렬**적으로 로드되는데, **스크립트를 실행할 
 
 HTML 파싱과 **병렬**적으로 로드되는데, **파싱이 끝나고 스크립트를 로드**한다. (그러나 [DOMContentLoaded](https://ko.javascript.info/onload-ondomcontentloaded) 발생 이전에 실행해야 함) 보통 `<body>` 태그 직전에 `<script>`를 삽입하는 것과 동작은 같지만 브라우저 호환성이 다를 수 있으므로 그냥 `<body>` 태그 직전에 삽입하는 것이 좋다.
 
-> <script />에 type=module이 있다면 기본적으로 defer로 동작한다.
+> `<script />`에 type=module이 있다면 기본적으로 defer로 동작한다.
 
 지연 스크립트는 일반 스크립트와 마찬가지로 HTML에 추가된 순(상대순, 요소순)으로 실행된다. 따라서 길이가 긴 스크립트가 앞에, 길이가 짧은 스크립트가 뒤에 있어도 **짧은 스크립트는 긴 스크립트가 실행될 때까지 기다린다**. 그래서 짧은 스크립트가 먼저 다운로드되어도 실행은 나중에 된다.
 
@@ -79,7 +79,7 @@ document.body.append(script); // (*)
 <script src="anotherscript.js" async></script>
 ```
 
-
+![https://web-dev.imgix.net/image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/6lccoVh4f6IJXA8UBKxH.svg](https://web-dev.imgix.net/image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/6lccoVh4f6IJXA8UBKxH.svg)
 
 
 
