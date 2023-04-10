@@ -278,7 +278,7 @@ https://inpa.tistory.com/entry/WEB-%F0%9F%93%9A-HTTP-referer-%EB%9E%80
 
 크로스 사이트 스크립팅([XSS](https://nordvpn.com/ko/blog/xss-attack/))과 크로스 사이트 요청 위조는 사용자의 브라우저를 대상으로 한다는 공통점이 있다. 하지만 다음과 같은 차이가 있다.
 
--  세션 악용 여부
+- 세션 악용 여부
   - XSS: 인증된 세션 없이도 공격 가능
   - CSRF: 사용자의 인증된 세션을 악용하는 공격 방식
 - 사용자 신뢰의 허점
