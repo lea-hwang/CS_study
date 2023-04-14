@@ -1,6 +1,6 @@
 # Script, Script async, Script defer
 
-![enter image description here](assets/wfL82.png)
+<img src="assets/wfL82.png" alt="enter image description here" style="zoom:50%;" />
 
 💡`<script>`
 
@@ -12,7 +12,7 @@ HTML 파싱이 중단되고 즉시 스크립트가 로드되며 로드된 스크
 
 HTML 파싱과 **병렬**적으로 로드되는데, **스크립트를 실행할 때는 파싱이 중단**된다.(`DOMContentLoaded` 이벤트와 async 스크립트는 서로를 기다리지 않는다.) **다른 스크립트가 의존하지 않는 독자적인 스크립트를 로드**할 때 적합하다.
 
-![img](assets/images%2Fjiseong%2Fpost%2Fab7693fa-9129-4f7a-a20b-e20fb3307379%2Fimage.png)
+<img src="assets/images%2Fjiseong%2Fpost%2Fab7693fa-9129-4f7a-a20b-e20fb3307379%2Fimage.png" alt="img" style="zoom: 50%;" />
 
 다른 스크립트들은 `async` 스크립트를 기다리지 않는다. `async` 스크립트 역시 다른 스크립트들을 기다리지 않는다. 이런 특징 때문에 페이지에 `async` 스크립트가 여러 개 있는 경우, 그 실행 순서가 제각각이 된다. 실행은 다운로드가 끝난 스크립트 순으로 진행된다. 위치상으론 더 짧은 스크립트가 아래이고 긴 스크립트가 위에 있어도 짧은 스크립트가 **먼저 다운로드되었기 때문에 먼저 실행된다**. 이렇게 먼저 로드가 된 스크립트가 먼저 실행되는 것을 ⭐`load-first order`라고 부른다.
 
@@ -37,7 +37,7 @@ HTML 파싱과 **병렬**적으로 로드되는데, **파싱이 끝나고 스크
 
 > `<script />`에 type=module이 있다면 기본적으로 defer로 동작한다.
 
-지연 스크립트는 일반 스크립트와 마찬가지로 HTML에 추가된 순(상대순, 요소순)으로 실행된다. 따라서 길이가 긴 스크립트가 앞에, 길이가 짧은 스크립트가 뒤에 있어도 **짧은 스크립트는 긴 스크립트가 실행될 때까지 기다린다**. 그래서 짧은 스크립트가 먼저 다운로드되어도 실행은 나중에 된다.
+지연 스크립트는 일반 스크립트와 마찬가지로 HTML에 추가된 순(상대순, 요소순)으로 실행된다. 따라서 길이가 긴 스크립트가 앞에, 길이가 짧은 스크립트가 뒤에 있어도 **짧은 스크립트는 긴 스크립트가 실행될 때까지 기다린다**. 그래서 ⭐짧은 스크립트가 먼저 다운로드되어도 실행은 나중에 된다.
 
 ```html
 <script defer src="https://javascript.info/article/script-async-defer/long.js"></script>
@@ -68,7 +68,7 @@ document.body.append(script); // (*)
 
 ❓async나 defer script들은 어떻게 병렬적으로 처리되는 걸까❓
 
-💡Preload scanner
+💡**Preload scanner**
 
 브라우저가 DOM 트리를 만드는 프로세스는 메인 쓰레드를 차지한다. 그렇기 때문에, *프리로드 스캐너* 는 사용 가능한 컨텐츠를 분석하고 CSS나 Javscript, 웹 폰트 같이 우선순위가 높은 자원을 요청한다. 프리로드 스캐너 덕에 구문 분석기가 외부 자원에 대한 참조를 찾아 요청하기까지 기다리지 않아도 된다. 프리로드 스캐너가 자원을 뒤에서 미리 요청하기 때문에 구문 분석기가 요청되는 자원에 다다를 때 쯤이면 이미 그 자원들을 전송받고 있거나 이미 전송받은 후가 된다. 프리로드 스캐너가 제공하는 최적화는 블록킹을 줄여준다.
 
