@@ -161,12 +161,12 @@
 | ---- | ---------- | -------------------------------------------------------- | ------ | ---------- |
 | 1    | JavaScript | `Promise가 콜백 대비 가지는 장/단점`                     | 황희원 | 2023.04.15 |
 | 2    | JavaScript | `async/await`                                            | 황희원 | 2023.04.15 |
-| 3    | React/Vue  | `React vs Vue`                                           | 박소정 | 2023.04.17 |
-| 4    | React/Vue  | `component`                                              | 박소정 | 2023.04.17 |
-| 5    | React/Vue  | `Virtual DOM`                                            | 배근혜 | 2023.04.17 |
-| 6    | React/Vue  | `props vs state`                                         | 배근혜 | 2023.04.17 |
-| 7    | React/Vue  | `re-rendering`                                           | 황희원 | 2023.04.17 |
-| 8    | React/Vue  | `axios/fetch`                                            | 황희원 | 2023.04.17 |
+| 3    | React/Vue  | `React vs Vue`                                           | 박소정 | 2023.04.18 |
+| 4    | React/Vue  | `component`                                              | 박소정 | 2023.04.18 |
+| 5    | React/Vue  | `Virtual DOM`                                            | 배근혜 | 2023.04.18 |
+| 6    | React/Vue  | `props vs state`                                         | 배근혜 | 2023.04.18 |
+| 7    | React/Vue  | `re-rendering`                                           | 황희원 | 2023.04.18 |
+| 8    | React/Vue  | `axios/fetch`                                            | 황희원 | 2023.04.18 |
 | 9    | React      | `React hooks(useState, useEffect, useMemo, useCallback)` | 박소정 | 2023.04.19 |
 | 10   | React      | `context api vs redux vs recoil`                         | 박소정 | 2023.04.19 |
 | 11   | React      | `리액트에서 HOC란`                                       | 배근혜 | 2023.04.19 |
