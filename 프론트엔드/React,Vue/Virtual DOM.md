@@ -87,6 +87,8 @@ Webkit 에서는 노드의 스타일을 처리하는 과정을 ‘attachment’ 
 
 - ***UI의 이상적인 또는 “가상”적인 표현을 메모리에 저장**하고 ReactDOM과 같은 **라이브러리에 의해 “실제” DOM과 동기화하는 프로그래밍 개념**이다.*
 
+- 이 개념은 `React`에 의해 개척되었으며, Vue를 비롯해 다른 많은 프레임워크에 적용되었다.
+
 - DOM을 가볍게 만든 JavaScript 표현이라고 할 수 있고 주로 React, Vue.js그리고 ELm에 사용된다.
 
   > `ELm` : 웹 브라우저 기반의 GUI(Graphical user interface)를 선언적으로 작성하기 위한 도메인 특화 언어
@@ -103,13 +105,59 @@ Webkit 에서는 노드의 스타일을 처리하는 과정을 ‘attachment’ 
 
 
 
-- 가상dom tree에서 실제 dom tree에 올릴 때 비교하는 과정? 디핑(diffing)/패치 다양한 이름 한번 조삭ㄱㄱㄱ
-
-
-
 ### ❓ Virtual DOM이 변화를 어떻게 적용시키나
 
 Virtual DOM은 **변화가 일어나면** 그 변화를 **오프라인 DOM 트리에 적용**시킨다. 이 DOM 트리는 렌더링도 되지 않기때문에 **연산 비용이 적다**. 연산이 끝나고 나면 그 **최종적인 변화를 실제 DOM에 던져준다.** 모든 변화를 하나로 묶어서 **딱 한번만** 한다. 그러면 레이아웃 계산과 리랜더링의 규모는 커지겠지만, 딱 한번만 한다는 것! 이렇게 하나로 묶어서 적용시키는것이, **연산의 횟수를 줄이는 것**.
+
+예를 들어, React에서 state나 props가 갱신되면 render() 함수가 호출되어 새로운 앨리먼트(VDOM) 트리를 반환한다.
+
+이때 효과적으로 UI를 갱신하기 위해서 **기존의 VDOM(Old virtual DOM)과 새로운 VDOM(Old virtual DOM)의 차이점을 찾아내어 변경된 부분만 새롭게 랜더링**한다.
+
+즉, Virtual DOM은 DOM이 변경될 때마다 전체 DOM을 Reflow 하는 것이 아니라 
+
+가상의 DOM을 이용하여 **한번만 Reflow를 수행**함으로 부하를 줄여 빠르게 그릴 수 있다.
+
+
+
+✔️ 먼저 변화가 발생하면, `Vue`의 경우 변화가 필요한 곳만 추적해서 큐잉한다. `React`의 경우 컴포넌트를 렌더링하고 이펙트를 큐잉한다. 트리 비교를 통해 돔 조작을 하는데 이 프로세스를 "**patch**"(Vue)라고 하며 "**diffing**" 또는 "**reconciliation**"이라고도 한다.
+
+#### ✅ React
+
+1. **React의 Diffing Algorithm**
+
+   > 일반적으로 기존의 DOM 트리를 새로운 트리로 변환하기 위하여 최소한의 연산을 하기위해서 최신 알고리즘을 사용하여도 n개의 노드가 있을때 O(n^3)의 복잡도를 가진다. 
+   >
+   > React는 2 가지 가정을 기반으로 O(n) 복잡도의 heuristic 알고리즘을 구현하였다. 
+   >
+   > 아래는 두가지 가정을 기반으로 알고리즘이 구현되었다.
+   >
+   > 1. **Two elements of differnt types will produce different trees.**
+   >
+   >    서로 다른 타입을 가진 두 엘리먼트는 다른 트리를 만들어 낸다.
+   >
+   > 2. **The developer can hit at which child elements may be stable across different renders with a key prop.**
+   >
+   >    개발자가 key prop를 통해 자식 엘리먼트의 변경 여부를 표시할 수 있다.
+   >
+   > https://react.dev/learn/preserving-and-resetting-state
+
+2. **React Fiber**
+
+   > 새로운 reconciliation algorighm
+   >
+   > https://github.com/acdlite/react-fiber-architecture
+
+#### ✅ Vue
+
+**Patch**
+
+>  마운트 중에 사용된 의존성이 변경되면 이팩트가 다시 실행된다. 이번에는 업데이트된 새로운 가상 DOM 트리가 생성된다. 런타임 렌더러는 새 트리를 탐색하고 이전 트리와 비교하고 필요한 업데이트를 실제 DOM에 적용한다.
+>
+> [공식문서 참조](https://ko.vuejs.org/guide/extras/rendering-mechanism.html#compiler-informed-virtual-dom)
+>
+> https://itchallenger.tistory.com/731
+
+
 
 사실, 이 과정은 Virtual DOM이 없이도 이뤄질수 있다. *변화가 있을 때, 그 변화를 묶어서 DOM fragment 에 적용한 다음에 기존 DOM 에 던져주면 된다.*
 
@@ -129,6 +177,13 @@ Virtual DOM은 **변화가 일어나면** 그 변화를 **오프라인 DOM 트�
 
 
 
+
+
 참고)
 
 https://velopert.com/3236
+
+https://rbals0445.tistory.com/62
+
+https://itchallenger.tistory.com/757
+
