@@ -99,19 +99,22 @@
      ```javascript
      // Button 0과 Button 1이라는 텍스트가 있는 2개의 버튼을 생성하고 이를 클릭할 때 0과 1을 알리도록 한다고 가정
      for (var i = 0; i < 2; i++) {
-       const button = document.createElement("button");
-       button.innerText = `Button ${i}`;
-       button.onclick = function () {
-         console.log(i);
-       };
-       document.body.appendChild(button);
+         // Create element:
+         const button = document.createElement("button");
+         button.innerText = `Button ${i}`;
+         button.onclick = function () {
+             console.log(i);
+         };
+         // Append to body:
+         document.body.appendChild(button);
      }
      console.log(i); // 2
      // 클릭하면 Button 0과 Button 1 모두 2를 알린다(i는 전역이므로)
+     // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_createelement3
      ```
-
+   
    - ES6 이전에 이 문제를 해결하려면 IIFE 패턴을 사용할 수 있다.
-
+   
      ```javascript
      for (var i = 0; i < 2; i++) {
        const button = document.createElement("button");
@@ -126,9 +129,9 @@
      console.log(i); // 2
      // 클릭하면 버튼 0과 1이 0과 1을 알려준다. 변수 i는 전역적으로 정의된다.
      ```
-
+   
    - **let** 문을 사용시
-
+   
      ```javascript
      for (let i = 0; i < 2; i++) {
        const button = document.createElement("button");
@@ -141,7 +144,7 @@
      console.log(i); // Uncaught ReferenceError: i is not defined.
      // 클릭하면 이 버튼들은 0과 1을 알려준다.
      ```
-
+   
      
 
 
