@@ -110,8 +110,9 @@
      }
      console.log(i); // 2
      // 클릭하면 Button 0과 Button 1 모두 2를 알린다(i는 전역이므로)
-     // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_createelement3
      ```
+
+     [코드 참고](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_createelement3)
    
    - ES6 이전에 이 문제를 해결하려면 IIFE 패턴을 사용할 수 있다.
    
