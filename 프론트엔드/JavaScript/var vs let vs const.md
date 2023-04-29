@@ -250,6 +250,8 @@ greeting.message = "say Hello instead";
 - 세 가지 모두 최상위로 호이스팅된다. 하지만 `var` 변수만 **`undefined(정의되지 않음)`으로 초기화**되고 `let`과 `const` 변수는 **초기화되지 않는다**.
 - `var`와 `let`은 **초기화하지 않은 상태에서 선언**할 수 있지만, `const`는 **선언 중에 초기화**해야한다.
 
+![image](https://user-images.githubusercontent.com/37495515/235312091-b9dbe79b-dc3c-4e87-b324-3348a2ea7a33.png)
+
 
 
 
