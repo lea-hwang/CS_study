@@ -55,7 +55,7 @@ const kim = new Person('kim', 10, 20);
 console.log(kim);
 ```
 
-![image-20230405121614244](C:\Users\heewo\AppData\Roaming\Typora\typora-user-images\image-20230405121614244.png)
+![image-20230405121614244](assets/image-20230405121614244.png)
 
 위의 코드에서 `new Person(...)`이 작동하는 방식은 다음과 같다.
 
