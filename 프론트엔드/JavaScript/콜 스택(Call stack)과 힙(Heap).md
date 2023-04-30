@@ -6,7 +6,7 @@
 
 ## 콜 스택(Call Stack)
 
-**원시 타입(숫자 등)** 데이터가 저장된다.
+**원시 타입(숫자 등)** 과 **실행컨텍스트**가 저장된다.
 
 실행 콘텍스트(Execution Context)를 통해
 
@@ -151,6 +151,6 @@ myArray = 3;
 
 
 
-참고 자료
+**참고 자료**
 
 https://charming-kyu.tistory.com/19
