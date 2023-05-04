@@ -12,7 +12,7 @@ HTML 파싱이 중단되고 즉시 스크립트가 로드되며 로드된 스크
 
 HTML 파싱과 **병렬**적으로 로드되는데, **스크립트를 실행할 때는 파싱이 중단**된다.(`DOMContentLoaded` 이벤트와 async 스크립트는 서로를 기다리지 않는다.) **다른 스크립트가 의존하지 않는 독자적인 스크립트를 로드**할 때 적합하다.
 
-<img src="assets/images%2Fjiseong%2Fpost%2Fab7693fa-9129-4f7a-a20b-e20fb3307379%2Fimage.png" alt="img" style="zoom: 50%;" />
+<img src="assets/images%2Fjiseong%2Fpost%2Fab7693fa-9129-4f7a-a20b-e20fb3307379%2Fimage-1683213343038-1.png" alt="img" style="zoom: 50%;" />
 
 다른 스크립트들은 `async` 스크립트를 기다리지 않는다. `async` 스크립트 역시 다른 스크립트들을 기다리지 않는다. 이런 특징 때문에 페이지에 `async` 스크립트가 여러 개 있는 경우, 그 실행 순서가 제각각이 된다. 실행은 다운로드가 끝난 스크립트 순으로 진행된다. 위치상으론 더 짧은 스크립트가 아래이고 긴 스크립트가 위에 있어도 짧은 스크립트가 **먼저 다운로드되었기 때문에 먼저 실행된다**. 이렇게 먼저 로드가 된 스크립트가 먼저 실행되는 것을 ⭐`load-first order`라고 부른다.
 
@@ -79,7 +79,7 @@ document.body.append(script); // (*)
 <script src="anotherscript.js" async></script>
 ```
 
-![https://web-dev.imgix.net/image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/6lccoVh4f6IJXA8UBKxH.svg](https://web-dev.imgix.net/image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/6lccoVh4f6IJXA8UBKxH.svg)
+![https://web-dev.imgix.net/image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/6lccoVh4f6IJXA8UBKxH.svg](assets/6lccoVh4f6IJXA8UBKxH.svg+xml)
 
 
 
