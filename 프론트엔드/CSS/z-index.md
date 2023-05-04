@@ -25,7 +25,7 @@
 
 : HTML 요소들에 사용자를 바라보는 기준으로 *가상의 z축을 생성하여 3차원 개념으로 보는 것*
 
-![img](assets/stacking context.png)
+![stacking_context](assets/stacking_context.png)
 
 위의 그림을 보면 사용자가 뷰포트 또는 웹페이지를 바라보고 있을 때 각각의 요소들이 z-index에 따라 쌓이는 것을 확인할 수 있다. z-index는 쌓임맥락에서의 쌓임순서(z축에서의 우선순위)를 결정한다고 볼 수 있다. 
 
