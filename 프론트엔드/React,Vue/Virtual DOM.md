@@ -55,7 +55,7 @@ document.getElementById('some-id').innerValue = 'updated value';
 
 ### Render Tree 생성 – 그 뒤에선 무슨일이 일어나고 있는가..?
 
-Webkit 에서는 노드의 스타일을 처리하는 과정을 ‘attachment’ 라고 부른. DOM 트리의 모든 노드들은 ‘attach’ 라는 메소드가 있다. 이 메소드는 *스타일 정보를 계산해서 객체형태로 반환*한다.
+Webkit 에서는 노드의 스타일을 처리하는 과정을 `attachment` 라고 부다다. DOM 트리의 모든 노드들은 `attach` 라는 메소드가 있다. 이 메소드는 *스타일 정보를 계산해서 객체형태로 반환*한다.
 
 이 과정은 동기적(synchronous) 작업이다. DOM 트리에 새로운 노드가 추가되면 그 노드의 attach 메소드가 실행된다.
 
