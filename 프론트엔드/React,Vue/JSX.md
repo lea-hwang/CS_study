@@ -1,6 +1,6 @@
 # JSX
 
-"React에서 사용하는" *자바스크립트를 확장*한 문법. UI가 어떻게 생겨야 하는지를 설명함. 
+*자바스크립트를 확장*한 문법. UI가 어떻게 생겨야 하는지를 설명함. 
 
 ```jsx
 const element = <h1>Hello, world!</h1>
@@ -94,3 +94,10 @@ const element = React.createElement(
 ```
 
 이러한 객체를 `React 엘리먼트`라고 하며 화면에서 보고 싶은 것을 나타내는 표현이다.
+
+
+❗Vue에서도 이러한 JSX를 지원하고 있다. 그러나 React에서 사용하는 것과는 조금 문법이 다르다.
+[JSX](https://vuejs.org/guide/extras/render-function.html#jsx-tsx)
+
+1. react에서 사용하는 className과 htmlFor 대신, `class`, `for`를 사용해야 한다.
+2. 자식 요소들을 전달하는 과정이 다르다. [slot](https://vuejs.org/guide/extras/render-function.html#passing-slots)
