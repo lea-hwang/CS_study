@@ -1,6 +1,6 @@
-# JSX
+# JSX(JavaScript XML)
 
-*자바스크립트를 확장*한 문법. UI가 어떻게 생겨야 하는지를 설명함. 
+JSX는 *Javascript에 XML을 추가한 확장한 문법* 입니다. 
 
 ```jsx
 const element = <h1>Hello, world!</h1>
